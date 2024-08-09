@@ -1,0 +1,17 @@
+name: Workflow 2
+
+on:
+  workflow_dispatch: # Allows the workflow to be triggered via API
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Run a simple script
+        run: |
+          echo "Executing Workflow 2"
+          sleep 10
+          echo "Workflow 2 complete"
